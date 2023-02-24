@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "./app.py",
-            "use": "@ardnt/vercel-python-wsgi"
+            "use": "@vercel/python"
         }
     ],
 
