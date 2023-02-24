@@ -2,3 +2,4 @@ __pycache__/
 templatesss/
 templates/secretMaterials.html
 website/discordStuff.py
+.vercel
