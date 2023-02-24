@@ -2,8 +2,8 @@
     "version": 2,
     "builds": [
         {
-            "src": "app.py",
-            "use": "@ardnt/now-python-wsgi"
+            "src": "./app.py",
+            "use": "@ardnt/vercel-python-wsgi"
         }
     ],
 

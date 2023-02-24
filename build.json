@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "./app.py",
-            "use": "@ardnt/now-python-wsgi"
+            "use": "@ardnt/vercel-python-wsgi"
         }
     ],
     "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
