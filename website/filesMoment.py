@@ -7,14 +7,14 @@ def extendApplication(app):
         return send_from_directory('website/static', filename)
 
 
-    @app.route('/PERPUUE/<path:filename>')
-    def perpue(filename):
-        if not discord.authorized:
-            return redirect("/")
-        guilds = discord.fetch_guilds()
-        user = discord.fetch_user()
-        guildsw = [g.id for g in guilds]
-        if prepSrvID in guildsw:
-            return send_from_directory('website/ProjectYEEEE', filename)
-        else:
-            return redirect("/")
+    # @app.route('/PERPUUE/<path:filename>')
+    # def perpue(filename):
+    #     if not discord.authorized:
+    #         return redirect("/")
+    #     guilds = discord.fetch_guilds()
+    #     user = discord.fetch_user()
+    #     guildsw = [g.id for g in guilds]
+    #     if prepSrvID in guildsw:
+    #         return send_from_directory('website/ProjectYEEEE', filename)
+    #     else:
+    #         return redirect("/")
