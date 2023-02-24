@@ -1,0 +1,169 @@
+<html>
+    <head><title> PEPPERED FAN WEBSITE </title>    
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+        body {
+            overflow: hidden;
+            color: #a7a6ab;
+            background-color: #00a;
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: .8em;
+            height: 100%;
+            width: 100%;
+            position: absolute
+        }
+
+        .centerme {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+
+        .hcenter {
+            width: 580px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .boxme {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        .blink {
+            -webkit-animation: blink .75s linear infinite;
+            -moz-animation: blink .75s linear infinite;
+            -ms-animation: blink .75s linear infinite;
+            -o-animation: blink .75s linear infinite;
+            animation: blink .75s linear infinite
+        }
+
+        @-webkit-keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1
+            }
+
+            100%,
+            50.01% {
+                opacity: 0
+            }
+        }
+
+        @-moz-keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1
+            }
+
+            100%,
+            50.01% {
+                opacity: 0
+            }
+        }
+
+        @-ms-keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1
+            }
+
+            100%,
+            50.01% {
+                opacity: 0
+            }
+        }
+
+        @-o-keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1
+            }
+
+            100%,
+            50.01% {
+                opacity: 0
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1
+            }
+
+            100%,
+            50.01% {
+                opacity: 0
+            }
+        }
+
+        .whiteboxTitle {
+            color: #00a;
+            background-color: #a7a6ab;
+            text-align: center;
+            width: 130px;
+            padding: 2px 1px
+        }
+        .bruhCodeboxTitle {
+            color: #00a;
+            background-color: #007712;
+            text-align: center;
+            width: 130px;
+            padding: 2px 1px
+        }
+
+        .footerBox {
+            text-align: center;
+            width: 430px;
+            padding: 2px 1px
+        }
+
+        .colorBSOD {
+            background-color: #00a
+        }
+    </style>
+</head>
+
+<body onload="addEvent()">
+    <script>
+        function addEvent(){
+           document.body.addEventListener("click", play)
+         }
+        function play() {
+          var audio = document.getElementById("audio");
+          audio.play();
+        }
+      </script>
+      <audio id="audio" src="assets/audio/CHORD.WAV"></audio>
+    <div class="centerme" style="align:center">
+        <div class="hcenter">
+            <div class="colorBSOD">
+                <div class="hcenter boxme centerme whiteboxTitle">No access</div>
+            </div>
+            <div>
+                <p>FUCK! Something went wrong<br>maybe salty is sad because of this?<br><br><div class="bruhCodeboxTitle">Some details:</div><br><br>{{ fuckedError }}</p>
+            </div>
+            <br>
+            <div class="colorBSOD">
+                <div class="hcenter boxme centerme footerBox">Press <strong>F5</strong> for updating page
+                    <span class="blink">_</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        style="display: inline-block; position: absolute; width: auto; padding-left: 0px; padding-right: 0px; margin-left: 0px; margin-right: 0px; visibility: hidden;">
+    </div>
+</body>
+</html>
