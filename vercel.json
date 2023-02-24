@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "app.py",
-            "use": "@ardnt/now-python-wsg"
+            "use": "@ardnt/now-python-wsgi"
         }
     ],
 
