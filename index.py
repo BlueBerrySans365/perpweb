@@ -5,7 +5,6 @@ from flask import Flask, redirect, url_for, send_file, render_template, send_fro
 from markupsafe import escape
 
 import website.errorPage as errorPage
-import website.filesMoment as filesmoment
 
 app = Flask(__name__)
 
@@ -13,6 +12,8 @@ HYPERLINK = '<a href="{}">{}</a>'
 
 data = open(f"{os.getcwd()}/website/static/arts.json")
 arts = json.load(data)
+
+
 
 # Some fixes will be here
 def deskFIXED(texr):
@@ -58,10 +59,13 @@ def ranImg():
     results['type'] = file_extension
     return results
 
+@app.route('/assets/<path:filename>')
+def websiteStaticAssetsHandler(filename):
+    return send_from_directory('website/static', filename)
+
 @app.route('/')
 def index():
     fuck = ranImg()
-    print(fuck['type'])
     fileFormat = None
     if fuck['type'] in imgExt:
         return render_template('index.html',  
@@ -98,7 +102,6 @@ def index():
 
 
 errorPage.extendApplication(app)
-filesmoment.extendApplication(app)
 
 if __name__ == "__main__":
     app.run(debug=True)
