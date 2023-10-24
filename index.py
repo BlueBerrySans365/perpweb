@@ -65,17 +65,18 @@ def websiteStaticAssetsHandler(filename):
 
 @app.route('/')
 def index():
-    fuck = ranImg()
-    fileFormat = None
-    if fuck['type'] in imgExt:
-        return render_template('index.html',  
-        fanartDesc=deskFIXED(fuck['desc']), 
-        fanartAuthor= fuck['author'],
-        fanartURL=f"{fuck['url']}", 
-        fanartWidth = fuck['width'] / 2,
-        fanartHeight = fuck['height'] / 2,
-        counter = ranLow())
-    elif "mov" or "MOV" or "mp4" in fuck['type']:
+    return 500
+   # fuck = ranImg()
+   # fileFormat = None
+   # if fuck['type'] in imgExt:
+      #  return render_template('index.html',  
+      #  fanartDesc=deskFIXED(fuck['desc']), 
+       # fanartAuthor= fuck['author'],
+        #fanartURL=f"{fuck['url']}", 
+       # fanartWidth = fuck['width'] / 2,
+        #fanartHeight = fuck['height'] / 2,
+        #counter = ranLow())
+    #elif "mov" or "MOV" or "mp4" in fuck['type']:
         # match fuck['type']: #vercel don't support 3.10 yet
         #     case "mov":
         #         fileFormat = "mov"
@@ -83,22 +84,22 @@ def index():
         #         fileFormat = "mp4"
         #     case "MOV":
         #         fileFormat = "MOV"
-        if fuck['type'] == "mov":
-            fileFormat = "mov"
-        elif fuck['type'] == "mp4":
-            fileFormat = "mp4"
-        else:
-            pass
-        return render_template('indexvideos.html',  
-        fanartDesc=deskFIXED(fuck['desc']), 
-        fanartAuthor= fuck['author'],
-        fanartURL=f"{fuck['url']}", 
-        fanartWidth = fuck['width'] / 1.5,
-        fanartHeight = fuck['height'] / 1.5,
-        fileFormat = fileFormat,
-        counter = len(arts.keys()))
-    else:
-        return 404
+        #if fuck['type'] == "mov":
+        #    fileFormat = "mov"
+        #elif fuck['type'] == "mp4":
+        #    fileFormat = "mp4"
+        #else:
+        #    pass
+        #return render_template('indexvideos.html',  
+        #fanartDesc=deskFIXED(fuck['desc']), 
+        #fanartAuthor= fuck['author'],
+        #fanartURL=f"{fuck['url']}", 
+        #fanartWidth = fuck['width'] / 1.5,
+        #fanartHeight = fuck['height'] / 1.5,
+        #fileFormat = fileFormat,
+        #counter = len(arts.keys()))
+    #else:
+    #    return 500
 
 
 errorPage.extendApplication(app)
