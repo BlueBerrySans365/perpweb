@@ -77,13 +77,13 @@ def index():
         fanartHeight = fuck['height'] / 2,
         counter = ranLow())
     elif "mov" or "MOV" or "mp4" in fuck['type']:
-         match fuck['type']: #vercel don't support 3.10 yet
-             case "mov":
-                 fileFormat = "mov"
-             case "mp4":
-                 fileFormat = "mp4"
-             case "MOV":
-                 fileFormat = "MOV"
+         #match fuck['type']: #vercel don't support 3.10 yet | FORGOT AGAIN!
+         #    case "mov":
+         #        fileFormat = "mov"
+         #    case "mp4":
+         #        fileFormat = "mp4"
+         #    case "MOV":
+         #        fileFormat = "MOV"
         if fuck['type'] == "mov":
             fileFormat = "mov"
         elif fuck['type'] == "mp4":
